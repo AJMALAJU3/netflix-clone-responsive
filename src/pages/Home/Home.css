@@ -1,0 +1,6 @@
+/* Custom CSS for the mask effect */
+.mask-image {
+    mask-image: linear-gradient(to right, transparent, black 45%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 45%);
+  }
+  
