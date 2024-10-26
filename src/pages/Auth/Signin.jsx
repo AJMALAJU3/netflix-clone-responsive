@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import logo from '../../assets/logo.png'
 import footer from '../../assets/footer.png'
-import { Navigate,Link } from 'react-router'
-import { doSignInWithGoogle, doSignInWithEmailAndPassword } from '../../ firebase/auth'
-import { useAuth } from '../../constants/authContext'
+
 
 function Signin() {
   const [check, setCheck] = useState(false)
-  const userLogedIn = useAuth()
 
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
@@ -16,21 +13,11 @@ function Signin() {
 
   const onsubmit = async (e) => {
     e.preventDefault()
-    if(!isSigningIn) {
-      setIsSigningIn(true)
-      await doSignInWithEmailAndPassword (email, password)
-    }
+    
   }
-  // const onGoogleSignIn = (e) => {
-  //   e.preventDefault()
-  //   if(!isSigningIn) {
-  //   setIsSigningIn(true)
-  //   doSignInWithGoogle().catch()
-  //   }
-  // }
+ 
   return (
     <div className="relative h-screen">
-      {userLogedIn && (<Navigate to={'/home'} replace={true} />)}
       
       <img
         className="absolute top-0 left-0 w-screen h-full object-cover z-[-1] hidden md:block"
