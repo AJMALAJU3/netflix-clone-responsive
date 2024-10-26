@@ -9,7 +9,8 @@ function Rowpost(props) {
             
             setMovies(response.data.results)
         })
-    },[])
+        
+    },[props.url])
   return (
     <div className='ml-[20px] mb-11'>
             <h2 className='font-semibold'>{props.title}</h2>

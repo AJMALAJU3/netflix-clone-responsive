@@ -1,10 +1,10 @@
 import React from 'react'
-
+import footer from '../../assets/footer.png'
 function Footer() {
   return (
-    <div>
-      
-    </div>
+    <div >
+        <img src={footer} alt="" />
+      </div>
   )
 }
 
